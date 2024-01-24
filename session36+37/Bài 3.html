@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Display</title>
+  </head>
+  <body>
+    <input type="text" id="input" oninput="displayInput()" />
+    <div id="div1"></div>
+    <div id="div2"></div>
+
+    <script>
+        // Cách 1:
+      function displayInput() {
+        let inputElement = event.target.value;
+        let div1Element = document.querySelector("#div1");
+        div1Element.textContent = "Cách 1: " + inputElement;
+      }
+
+      // Cách 2: 
+      let inputElement = document.querySelector("#input");
+      let div2Element = document.querySelector("#div2");
+      inputElement.addEventListener("input", function (){
+        div2Element.textContent = "Cách 2: " + inputElement.value;
+      })
+
+    </script>
+  </body>
+</html>

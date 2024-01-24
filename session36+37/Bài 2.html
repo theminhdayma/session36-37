@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">OFF</button>
+    <script>
+      let btnElement = document.querySelector("#btn");
+      let isOn = false;
+      btnElement.addEventListener("click", function () {
+        if (isOn) {
+          btnElement.innerHTML = "OFF";
+          isOn = false;
+        } else {
+          btnElement.innerHTML = "ON";
+          isOn = true;
+        }
+      });
+
+      btn.style.color = "black";
+      btn.style.fontSize = "30px";
+      btn.style.padding = "10px";
+      btn.style.borderRadius = "10px";
+      btn.style.background = "green";
+      btn.style.margin = "auto";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="a" type="text" />
+    <input id="b" type="text" />
+    <input id="c" type="text" />
+    <input id="d" type="text" />
+    <script>
+      let a = document.querySelector("#a");
+      let b = document.querySelector("#b");
+      let c = document.querySelector("#c");
+      let d = document.querySelector("#d");
+
+      // Cách 1:
+      a.addEventListener("input", sum);
+      b.addEventListener("input", sum);
+
+      function sum() {
+        let sum = parseInt(a.value) + parseInt(b.value);
+        c.value = sum;
+      }
+
+      //   Cách 2:
+      d.addEventListener("input", calculateSum);
+
+      function calculateSum() {
+        let sum = parseInt(a.value) + parseInt(b.value);
+        d.value = sum;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Your ansew
+    <input type="text" id="input" />
+    <button id="btn">Answer</button>
+    <script>
+      let btnElement = document.querySelector("#btn");
+      btnElement.addEventListener("click", function () {
+        let inputElement = document.querySelector("#input");
+        if(inputElement.value.length > 10){
+            alert("Không hợp lệ");
+        }else{
+            alert("Thành công !!!");
+        }
+      });
+
+      btn.style.color = "white";
+      btn.style.padding = "10px";
+      btn.style.borderRadius = "10px";
+      btn.style.background = "green";
+    </script>
+  </body>
+</html>

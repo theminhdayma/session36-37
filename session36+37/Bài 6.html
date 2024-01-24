@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Student Management</h1>
+    Id
+    <input id="id" type="text" /> <br />
+    Name
+    <input id="name" type="text" /><br />
+    Age
+    <input id="age" type="text" /><br />
+    Phone
+    <input id="phone" type="tel" /><br />
+    Email
+    <input id="email" type="email" /><br />
+    <button id="btn">Create</button>
+    <div id="studentInfo"></div>
+    <script>
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        var id = document.getElementById("id").value;
+        var name = document.getElementById("name").value;
+        var age = parseInt(document.getElementById("age").value);
+        var phone = document.getElementById("phone").value;
+        var email = document.getElementById("email").value;
+
+        let found = true;
+
+        if (id.length !== 6) {
+          found = false;
+        }
+
+        if (name.trim() === "") {
+          found = false;
+        }
+
+        if (age < 18) {
+          found = false;
+        }
+
+        if (phone.length !== 10) {
+          found = false;
+        }
+
+        if (!email.includes("@gmail.com")) {
+          found = false;
+        }
+
+        if (found) {
+          alert("Yeahh Yeahhh Yeahhhh!!!!");
+        }else{
+            alert("Nhập sai rồi !!!");
+        }
+      });
+    </script>
+  </body>
+</html>
